@@ -10,6 +10,17 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script type="text/javascript" src="./javascripts/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./javascripts/jquery.ajax-cross-origin.min.js"></script>
+    <script type="text/javascript">
+        $.ajax({
+            crossOrigin : true,
+            url : "https://dhlottery.co.kr/gameResult.do?method=byWin",
+            success : function(data) {
+                console.log(data);
+            }
+        }); 
+    </script>
     <title>Git command by notear0</title>
   </head>
 
@@ -29,7 +40,7 @@
           <h4>git push origin serverfix:awesomebranch</h4>
           <p>git push 리모트저장소 로컬브랜치:서버브랜치</p>
 
-          <h4>git log --online</h4>
+          <h4>git log --oneline</h4>
           <h4>git diff [commit1] [commit2]</h4>
           <p>commit log 출력 후 commit1과 commit2간의 diff를 출력</p>
 
